@@ -10,13 +10,8 @@ function Filter() {
 
   return (
     <label>
-      <p>Найти контакт:</p>
-      <input
-        className={s.input}
-        type="text"
-        value={value}
-        onChange={change}
-      />
+      <p>Find contact:</p>
+      <input className={s.input} type="text" value={value} onChange={change} />
     </label>
   );
 }

@@ -5,11 +5,9 @@ import { addContact } from '../../redux/phonebook-operations';
 import s from './ContactForm.module.css';
 
 function ContactForm() {
-
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
-   const onSubmit = (name, number) =>
-    dispatch(addContact(name, number));
+  const onSubmit = (name, number) => dispatch(addContact(name, number));
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -47,8 +45,8 @@ function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className={s.form}>
       <label className={s.label}>
-        Имя:
-          <input
+        Name:
+        <input
           type="text"
           name="name"
           value={name}
@@ -59,8 +57,8 @@ function ContactForm() {
       </label>
 
       <label className={s.label}>
-        Номер:
-          <input
+        Number:
+        <input
           type="tel"
           name="number"
           value={number}
@@ -70,8 +68,8 @@ function ContactForm() {
         />
       </label>
       <button type="submit" className={s.button}>
-        Добавить
-        </button>
+        Add contact
+      </button>
     </form>
   );
 }

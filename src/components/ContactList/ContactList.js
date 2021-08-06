@@ -5,7 +5,6 @@ import { getVisibleContacts } from '../../redux/phonebook-selectors';
 import s from './ContactList.module.css';
 
 function ContactList() {
-
   const contacts = useSelector(getVisibleContacts);
   const dispatch = useDispatch();
   const onDeleteContact = id => dispatch(operations.deleteContact(id));
@@ -22,13 +21,12 @@ function ContactList() {
             onClick={() => onDeleteContact(id)}
             className={s.button}
           >
-            Удалить
+            Delete
           </button>
         </li>
       ))}
     </ul>
   );
 }
-
 
 export default ContactList;

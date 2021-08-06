@@ -24,10 +24,10 @@ const styles = {
     border: ' 2px solid white',
     borderRadius: 10,
     color: '#5d8aa8',
-    padding:10,
+    padding: 10,
     background: 'white',
     cursor: 'pointer',
-  }
+  },
 };
 
 export default function LoginView() {
@@ -55,7 +55,7 @@ export default function LoginView() {
 
   return (
     <div style={styles.section}>
-      <h1>:)</h1>
+      <h2>Log in</h2>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="on">
         <label style={styles.label}>
@@ -69,7 +69,7 @@ export default function LoginView() {
         </label>
 
         <label style={styles.label}>
-          Пароль
+          Password
           <input
             type="password"
             name="password"
@@ -78,7 +78,9 @@ export default function LoginView() {
           />
         </label>
 
-        <button type="submit" style={styles.button}>Войти</button>
+        <button type="submit" style={styles.button}>
+          Enter
+        </button>
       </form>
     </div>
   );

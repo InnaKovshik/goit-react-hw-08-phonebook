@@ -18,14 +18,14 @@ const styles = {
 export default function App() {
   const contacts = useSelector(getVisibleContacts);
   const totalContactsCount = contacts.length;
-  
+
   return (
     <Container>
       <h1>Phonebook</h1>
       <ContactForm />
       <div style={styles.section}>
         <h2>Contacts:</h2>
-        <p>Общее кол-во: {totalContactsCount}</p>
+        <p>Total number: {totalContactsCount}</p>
         <Filter />
         <ContactList />
       </div>

@@ -18,16 +18,16 @@ const styles = {
     borderRadius: 10,
     background: '#5d8aa8',
   },
-   button: {
-   fontSize: 15,
+  button: {
+    fontSize: 15,
     fontWeight: 700,
     borderRadius: 10,
     border: ' 2px solid white',
     color: '#5d8aa8',
-    padding:10,
+    padding: 10,
     background: 'white',
     cursor: 'pointer',
-  }
+  },
 };
 
 export default function RegisterView() {
@@ -59,11 +59,11 @@ export default function RegisterView() {
 
   return (
     <div style={styles.section}>
-      <h1>Создать аккаунт</h1>
+      <h1>Create an account</h1>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="on">
         <label style={styles.label}>
-          Имя
+          Name
           <input type="text" name="name" value={name} onChange={handleChange} />
         </label>
 
@@ -78,7 +78,7 @@ export default function RegisterView() {
         </label>
 
         <label style={styles.label}>
-          Пароль
+          Password
           <input
             type="password"
             name="password"
@@ -87,7 +87,9 @@ export default function RegisterView() {
           />
         </label>
 
-        <button type="submit" style={styles.button}>Зарегистрироваться</button>
+        <button type="submit" style={styles.button}>
+          Register now
+        </button>
       </form>
     </div>
   );

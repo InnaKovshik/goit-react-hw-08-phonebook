@@ -5,37 +5,39 @@ import authSelectors from '../redux/auth/auth-selectors';
 
 const styles = {
   link: {
-    fontSize:'20px',
+    fontSize: '20px',
     display: 'inline-block',
     textDecoration: 'none',
-    marginLeft:25,
+    marginLeft: 25,
     padding: 12,
     fontWeight: 700,
     color: 'white',
   },
   activeLink: {
     color: '#5d8aa8',
-    
   },
 };
 
 const Navigation = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
-return ( <nav>
-    <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
-      Главная
-    </NavLink>
+  return (
+    <nav>
+      <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
+        Home page
+      </NavLink>
 
-    {isLoggedIn &&
-  (  <NavLink
-      to="/contacts"
-      exact
-      style={styles.link}
-      activeStyle={styles.activeLink}
-    >
-      Контакты
-    </NavLink>)}
-  </nav>)
+      {isLoggedIn && (
+        <NavLink
+          to="/contacts"
+          exact
+          style={styles.link}
+          activeStyle={styles.activeLink}
+        >
+          Contacts
+        </NavLink>
+      )}
+    </nav>
+  );
 };
 
 export default Navigation;
